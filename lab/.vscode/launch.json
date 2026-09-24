@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rectangle — inspecter le résultat",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/guided/run_rectangle.py",
+      "cwd": "${workspaceFolder}/guided",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}

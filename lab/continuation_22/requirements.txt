@@ -1,0 +1,8 @@
+# Versions tested for the retained September 22 notebooks.
+# Reuse the course Python environment when these packages are already available.
+ipykernel==7.3.0
+numpy==2.5.3
+pandas==3.0.5
+plotly==7.0.0
+matplotlib==3.11.1
+# PyTorch/CUDA is optional and is not installed by this file.
