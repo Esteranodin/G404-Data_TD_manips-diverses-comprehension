@@ -11,7 +11,7 @@ class Rectangle:
     def area(self) -> float:
         """Return the numeric area; this starter violates that contract."""
         # return f"Area: {self.width * self.height:g}"
-        # en corrigé (return type float et fonction poru print avec formatage :g)
+        # en corrigé (return type float et fonction pour print avec formatage :g)
         return self.width * self.height
 
 

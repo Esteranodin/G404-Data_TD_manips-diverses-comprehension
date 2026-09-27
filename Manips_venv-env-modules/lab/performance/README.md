@@ -15,7 +15,7 @@ Dans `vectorization_steps.py`, `values` est le tableau NumPy
 `[0.0, 60.0, 90.0, 120.0]`, en minutes. Le programme construit le résultat par
 une boucle, par une division du tableau, puis en confiant deux lots à un groupe
 de deux threads au maximum. Il rassemble les sorties dans l’ordre initial.
-Les trois méthodes donnent `[0.0, 1.0, 1.5, 2.0]`, en heures. NumPy est requis.
+Les trois méthodes donnent `[0.0, 1.0, 1.5, 2.0]`, en heures.
 Les tâches lisent le tableau sans le modifier. Deux lots ne garantissent pas
 l’emploi de deux threads différents, ni un calcul plus rapide.
 
@@ -59,7 +59,7 @@ cloud. Accélérer le même calcul ne remplace pas la validation de son résulta
 ## B — Même conversion, boucle ou tableaux
 
 `compare_execution.py` convertit les mêmes valeurs de minutes en heures par
-une boucle Python, NumPy, puis NumPy réparti entre threads. NumPy est requis.
+une boucle Python, NumPy, puis NumPy réparti entre threads.
 
 ```text
 python performance/compare_execution.py --size 100000 --workers 2 --repeats 3 --seed 404

@@ -1,4 +1,4 @@
-# Python : comprendre, vérifier, comparer (Manips_venv-env-modules)
+# Python : comprendre, vérifier, comparer
 
 Le travail consiste à expliquer un résultat, diagnostiquer un défaut et apporter une preuve de
 correction avant de comparer les performances.
@@ -7,14 +7,14 @@ correction avant de comparer les performances.
 Toutes les commandes ci-dessous partent de ce dossier. Dans les exemples, `python` désigne
 l'interpréteur de votre environnement choisi : vérifiez-le avec
 `01_environment_check.py`. Les commandes avec un chemin explicite pour Windows
-et Linux figurent dans [ENVIRONMENT.md](./Manips_venv-env-modules/Fiches_cours/ENVIRONMENT.md).
+et Linux figurent dans [ENVIRONMENT.md](./Manips_venv-env-modules/ENVIRONMENT.md).
 
 Les [consignes](./Manips_venv-env-modules/Consignes.md) détaillées, les valeurs acceptées et les résultats
 attendus, les exemples de code et le texte à compléter pour rendre votre travail. Gardez-le ouvert à côté de VS Code.
 
 ## Prendre en main le projet
 
-1. [Vérifier l'environnement](./Manips_venv-env-modules/Fiches_cours/ENVIRONMENT.md), puis lancer
+1. [Vérifier l'environnement](./Manips_venv-env-modules/ENVIRONMENT.md), puis lancer
    `python 01_environment_check.py`.
 3. Examiner le résultat attendu du rectangle, lancer le script et ses tests, puis
    diagnostiquer le défaut avec le débogueur.
@@ -34,18 +34,14 @@ d'import ou un interpréteur introuvable constitue un autre problème : revenez
 alors au guide d'environnement. Ne modifiez pas le résultat attendu d'un test
 pour faire disparaître un désaccord avec le résultat attendu.
 
-La fiche [PYTHONPATH dans .env](PYTHONPATH.md) montre pourquoi un lancement
+La fiche [PYTHONPATH](./Manips_venv-env-modules/PYTHONPATH.md) montre pourquoi un lancement
 direct et une découverte de tests peuvent trouver des modules différents.
 Elle explique les réglages à essayer, puis leur vérification dans un nouveau
 terminal. Le kit conserve son réglage initial ; suivez la fiche pour le modifier.
 
 ## Activités du cours
 
-La fiche [Demandes, préférences et contexte de l’IA](AI_PRACTICE.md) propose
-trois activités avec des exemples et des réponses fictives. Conservez votre
-travail dans `AI_NOTES.md`. Aucun compte IA n’est nécessaire.
-
-Avant les mesures de performance, les [exemples progressifs](performance/README.md)
+Avant les mesures de performance, les [exemples progressifs](./Manips_venv-env-modules/lab/performance/README.md)
 montrent quatre durées dans un tableau NumPy, leur traitement par deux lots,
 puis deux tâches exécutées en séquentiel et avec des processus. Les fonctions
 sont définies avant leur appel. Ces exemples expliquent le mécanisme sans
@@ -55,7 +51,7 @@ chronométrer le calcul.
 
 Commencez par le socle commun, puis choisissez un approfondissement adapté à
 ce que vous souhaitez consolider. Rendez les preuves décrites dans
-[SUBMISSION.md](SUBMISSION.md).
+[SUBMISSION.md](./Manips_venv-env-modules/SUBMISSION.md).
 
 ### Socle commun — Fonction, résultat et contrôle
 
@@ -123,48 +119,4 @@ les durées. Essayez une autre taille de tâche et expliquez si le coût de
 démarrage des processus est amorti. N'exécutez pas ce script en le copiant dans
 une cellule de notebook.
 
-### Référence facultative — Fonctions et gaussiennes
 
-Après le socle et l'approfondissement choisi,
-[le notebook de continuité](notebooks/02_Gaussian_functions_FR.ipynb) reprend
-les premières étapes du travail sur les fonctions et les gaussiennes du
-22 septembre. Il ne constitue pas une quatrième piste obligatoire. Ses
-dépendances supplémentaires sont réunies dans `requirements-gaussian.txt` :
-installez-les avec le Python du projet, puis sélectionnez ce même noyau Python.
-
-```text
-python -m pip install -r requirements-gaussian.txt
-```
-
-## Exemples repris du 22 septembre
-
-Le [dossier continuation_22](continuation_22/README.md) fournit les cinq notebooks
-cités dans le cours unifié : comparaison C++/Python, CPU/GPU, atelier gaussien
-complet, CSV/types/valeurs manquantes et anciennes pistes d’exercices.
-Le notebook gaussien complet poursuit jusqu’à la classe, aux graphiques et à
-votre module personnel ; il est distinct du petit notebook de fonctions ci-dessus.
-
-Pour ces cinq notebooks, préparer aussi leurs dépendances, dont Plotly et
-Matplotlib, avec le Python du projet :
-
-```text
-python -m pip install -r continuation_22/requirements.txt
-```
-
-Le notebook `05` contient les anciens choix du 22. Pour le travail du 24,
-le livret DOCX reste la référence : exercice commun, puis A, B ou C.
-
-## Ressources
-
-- [Utiliser et évaluer une aide IA](AI_HELP.md) : l'activité reste réalisable
-  sans compte IA, avec les réponses fictives fournies.
-- [Découvrir R ultérieurement](R_NEXT.md) : installation séparée, hors du
-  parcours de cette séance.
-- [Préparer le retour de travail](SUBMISSION.md).
-
-Les exercices de fonctions, de tests et de processus utilisent seulement Python.
-La lecture de `.env` requiert `python-dotenv`, la comparaison NumPy requiert
-`numpy`, et le notebook requiert un kernel Python avec `ipykernel`.
-Après préparation des outils et des packages, ces activités s'exécutent
-localement sans connexion à un service cloud. Aucun compte Google, GitHub ou IA
-n'est requis pour effectuer les exercices.

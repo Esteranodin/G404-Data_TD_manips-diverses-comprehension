@@ -42,14 +42,15 @@ L'annotation décrit le contrat ; elle ne convertit ni ne vérifie les valeurs
 à elle seule. Le domaine numérique utilisé dans cet exercice est celui des
 valeurs représentables comme nombres flottants finis Python.
 
-## A — Formaliser le module et ses tests
+## Formaliser le module et ses tests
 
 La fonction reste définie à un seul endroit : `duration_tools.py`. Les tests
 l'importent depuis ce module. Compléter la validation des entrées et remplacer
 chaque TODO dans `tests/test_duration.py` par des contrôles justifiés.
 
-```text
+```bash
 python -m unittest discover -s exercises/tests -v
+# pour lancer les tests (et bien à partir de \lab !)
 ```
 
 Les TODO provoquent un **échec explicite** avant leur remplacement. Utiliser
@@ -61,14 +62,3 @@ doit refuser au moins une erreur plausible ; modifier le contrat pour obtenir
 Preuve attendue : fichiers modifiés, noms et nombre de tests exécutés, sortie
 de la commande et explication d'un cas limite. Exécuter la commande dans un
 nouveau processus pour utiliser le module enregistré.
-
-## B ou C — Étudier l'exécution après le socle
-
-Le [guide de performance](../performance/README.md) propose B, comparaison
-boucle/NumPy/threads, et C, simulation séquentielle/processus. Le code des
-démonstrations est fourni : votre travail porte sur les paramètres, les preuves
-d'équivalence et l'interprétation des mesures.
-
-Préparer le retour à l'aide de [SUBMISSION.md](../SUBMISSION.md), quelle que
-soit la piste choisie. Une difficulté non résolue doit être accompagnée de la
-commande, de l'erreur et de ce qui fonctionne déjà.

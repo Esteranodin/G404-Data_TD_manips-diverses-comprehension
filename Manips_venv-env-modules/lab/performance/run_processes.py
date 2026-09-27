@@ -15,7 +15,10 @@ def run_sequential(tasks):
 
 def run_parallel(tasks, workers):
     # Spawn re-imports the worker module instead of copying notebook state.
-    with ProcessPoolExecutor(max_workers=workers, mp_context=get_context("spawn")) as pool:
+    with ProcessPoolExecutor(
+        max_workers=workers,
+        mp_context=get_context("spawn")
+    ) as pool:
         return list(pool.map(simulate_sample, tasks))
 
 

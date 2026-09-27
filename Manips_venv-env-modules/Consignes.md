@@ -1,7 +1,5 @@
 # Python : comprendre, vérifier, comparer
 
-**Exercices autonomes · 24 septembre 2026**
-
 Commencez par corriger une fonction qui convertit des minutes en heures. Choisissez ensuite un exercice A, B ou C pour approfondir les tests ou comparer des façons d'exécuter un calcul. Ce livret accompagne les fichiers du dossier `lab`.
 
 Le code de la fonction contient volontairement une erreur. Votre travail consiste à observer le résultat, expliquer l'erreur, la corriger et vérifier votre correction. Les extraits de code du livret peuvent être sélectionnés et copiés ; les indications autour de chaque extrait précisent comment l'utiliser.
@@ -25,11 +23,11 @@ Vous n'avez pas à terminer les trois exercices. A prolonge la correction de vot
 
 | Document ou dossier | Utilité |
 |---|---|
-| `lab/README.md` | Présentation des fichiers et liens vers les guides. |
-| `lab/ENVIRONMENT.md` | Préparation de Python et des bibliothèques nécessaires. |
+| `README.md` | Présentation des fichiers et liens vers les guides. |
+| `ENVIRONMENT.md` | Préparation de Python et des bibliothèques nécessaires. |
 | `lab/exercises/` | Fonction de conversion et tests à compléter. |
 | `lab/performance/` | Programmes des exercices B et C. |
-| `lab/SUBMISSION.md` | Liste des éléments à rendre. |
+| `SUBMISSION.md` | Liste des éléments à rendre. |
 
 > **Pour suivre les exemples.** Toutes les commandes des pages suivantes se lancent depuis le dossier `lab`. Les chemins de fichiers sont indiqués à partir de ce dossier. Le mot `python` désigne le Python choisi pour ce travail. Les explications sont en français ; les noms de fonctions, de variables et les commentaires de votre code restent en anglais.
 
@@ -209,7 +207,9 @@ python -m unittest discover -s exercises/tests -v
 
 ### Comprendre les trois façons de calculer
 
-La boucle Python traite les valeurs une à une. NumPy applique l'opération au tableau avec du code compilé, c'est-à-dire déjà traduit pour être exécuté par la machine. Dans la troisième version, plusieurs threads se répartissent le tableau : ce sont des fils d'exécution d'un même programme. Chaque thread écrit dans une partie distincte du tableau de résultats.
+La boucle Python traite les valeurs une à une.  
+NumPy applique l'opération au tableau avec du code compilé, c'est-à-dire déjà traduit pour être exécuté par la machine.  
+Dans la troisième version, plusieurs threads se répartissent le tableau : ce sont des fils d'exécution d'un même programme. Chaque thread écrit dans une partie distincte du tableau de résultats.
 
 Les lignes suivantes sont des extraits à lire dans les fonctions du fichier, pas un programme à exécuter seul :
 
@@ -248,7 +248,9 @@ Les durées sont en millisecondes. Avec trois mesures, la médiane est la valeur
 
 ## 6 · C : répartir les calculs entre processus
 
-**Fichiers :** `performance/process_tasks.py` et `performance/run_processes.py`. Python seul suffit. Un processus est ici une exécution séparée de Python, avec ses propres variables. Le programme principal peut envoyer du travail à plusieurs processus et récupérer leurs résultats.
+**Fichiers :** `performance/process_tasks.py` et `performance/run_processes.py`.  
+Un processus est ici une exécution séparée de Python, avec ses propres variables.  
+Le programme principal peut envoyer du travail à plusieurs processus et récupérer leurs résultats.
 
 ### Lire ce que reçoit une tâche et ce qu'elle renvoie
 
@@ -360,49 +362,6 @@ Vous pouvez faire cette réflexion sans assistant avec les deux réponses fictiv
 
 Conservez la commande qui reproduit l'erreur, sa sortie utile et votre explication possible. Précisez s'il s'agit d'un problème d'installation, de fichier introuvable, de résultat incorrect ou de temps de calcul. Vous pouvez rendre cette description même si la correction n'est pas terminée.
 
-`VSCODE.md` explique comment arrêter le programme sur une ligne pour lire ses variables. `ENVIRONMENT.md` aide à préparer Python. Pour les notebooks facultatifs, le noyau, ou *kernel*, est le Python qui exécute les cellules : redémarrez-le après avoir modifié un module, puis relancez les cellules dans l'ordre. Ne partagez ni `.env`, ni mots de passe, ni données personnelles pour obtenir de l'aide.
+`ENVIRONMENT.md` aide à préparer Python. Pour les notebooks facultatifs, le noyau, ou *kernel*, est le Python qui exécute les cellules : redémarrez-le après avoir modifié un module, puis relancez les cellules dans l'ordre. Ne partagez ni `.env`, ni mots de passe, ni données personnelles pour obtenir de l'aide.
 
 ---
-
-## 9 · Préparer les fichiers à rendre
-
-Rassemblez vos fichiers modifiés et créez `RETURN.md` dans `lab`. Ce fichier doit permettre à une autre personne de comprendre votre travail et de refaire vos vérifications. Olivier précisera où déposer les fichiers.
-
-### Texte à copier et compléter dans RETURN.md
-
-```markdown
-# Retour de travail — Python, 24 septembre 2026
-
-## Exercice commun et exercice choisi
-Ce que la fonction doit recevoir et renvoyer :
-Mon choix A, B ou C et ce que je voulais vérifier :
-
-## Ce que j'ai observé
-Valeur et type, message d'erreur ou temps mesuré :
-Cause possible et vérification effectuée :
-
-## Ce que j'ai changé
-Fichier ou paramètre modifié, et raison :
-
-## Mes vérifications
-Version de Python (et NumPy pour B), ordinateur et système :
-Commandes lancées depuis lab et résultats obtenus :
-Ce que ces résultats permettent de conclure :
-
-## Ce qui reste à vérifier
-Question restante ou erreur que je sais reproduire :
-Aide reçue, conseil suivi ou refusé, et explication :
-```
-
-### Vérifier que rien ne manque
-
-- **Exercice commun :** fonction corrigée, trois cas conservés, quatrième cas ajouté et expliqué, calcul réutilisant le résultat de la fonction.
-- **A :** vérification des valeurs acceptées et refusées, fichiers de tests, noms et nombre de tests exécutés, résultat affiché et explication d'un cas difficile.
-- **B ou C :** commandes complètes, paramètres, résultats identiques entre méthodes, durées répétées et médianes. Expliquez ce qui est inclus dans le temps mesuré, même si vous n'avez pas modifié les scripts.
-- **Pour tous :** enregistrez les fichiers et relancez les commandes depuis le terminal. Distinguez ce qui fonctionne, ce qui échoue et ce qui n'a pas été essayé.
-
-Joignez seulement les fichiers utiles, sans `.venv/`, `.env` ni les caches. Copiez les lignes de résultat nécessaires, sans chemins privés ni données personnelles. Si vous ajoutez un tableau de mesures, indiquez les unités, par exemple les millisecondes.
-
-### Pour aller plus loin, si vous le souhaitez
-
-Après l'exercice commun et celui que vous avez choisi, le notebook `notebooks/02_Gaussian_functions_FR.ipynb` permet de reprendre le travail du 22 septembre sur les fonctions et les lois normales. Les bibliothèques nécessaires sont indiquées dans `requirements-gaussian.txt`. Ce travail est facultatif. `R_NEXT.md` propose une découverte ultérieure de R.

@@ -21,6 +21,7 @@ def parse_integer(value: str | None, name: str, minimum: int, maximum: int) -> i
 def read_config(config_path: Path) -> dict[str, str | int]:
     """Read only the specified file and validate the three course settings."""
     from dotenv import dotenv_values
+    #  module qui permet de lire un fichier .env sans toucher aux variables globales de l’environnement
 
     if not config_path.is_file():
         raise FileNotFoundError(
@@ -46,6 +47,7 @@ def read_config(config_path: Path) -> dict[str, str | int]:
 def main() -> int:
     """Display validated values and their Python types."""
     config_path = Path(__file__).resolve().parent / ".env"
+    # \ concatène sur un path
     try:
         config = read_config(config_path)
     except ModuleNotFoundError as error:

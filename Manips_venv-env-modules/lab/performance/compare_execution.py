@@ -1,6 +1,7 @@
 """Compare a Python loop, NumPy and NumPy across disjoint thread slices."""
 
 import argparse
+import itertools
 from concurrent.futures import ThreadPoolExecutor
 from statistics import median
 from time import perf_counter
@@ -29,7 +30,8 @@ def divide_threads(values: np.ndarray, workers: int) -> np.ndarray:
         np.divide(values[start:stop], 60.0, out=output[start:stop])
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        list(pool.map(divide_slice, zip(boundaries[:-1], boundaries[1:])))
+        # plusieurs fils pour executer / attente
+        list(pool.map(divide_slice, itertools.pairwise(boundaries)))
     return output
 
 

@@ -17,6 +17,7 @@ def run_sequential(tasks):
 def run_parallel(tasks, workers):
     context = get_context("spawn")
     with ProcessPoolExecutor(
+    # plusieurs processeur pour executer en parallèle
         max_workers=workers, mp_context=context
     ) as pool:
         results = list(pool.map(sample_mean, tasks))

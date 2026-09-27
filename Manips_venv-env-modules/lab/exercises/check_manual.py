@@ -15,6 +15,8 @@ def main() -> None:
             f"type={type(result).__name__} : {'OK' if valid else 'À CORRIGER'}"
         )
         failed += not valid
+        # failed = failed + (not valid) // false = 0 et true = 1
+        # not valid  = inverse de valid donc si test est ok -> not valid = false donc 0 = pas d'incrémentation
     if failed:
         raise SystemExit(f"{failed} cas non conforme(s). Lire valeur ET type.")
     print("Contrôles réussis. Ajouter les limites avant de conclure.")

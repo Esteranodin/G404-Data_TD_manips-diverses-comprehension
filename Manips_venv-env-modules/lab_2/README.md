@@ -1,18 +1,3 @@
-# Poursuivre les exemples du 22 septembre
-
-Ces fichiers accompagnent les parties reprises dans le cours du 24 septembre :
-comparer les durées de calcul, construire une classe à partir de deux fonctions,
-puis lire des données sans perdre leur sens. Ils proviennent du dossier
-`courses/2026-09-22/notebooks/`. Leur code est conservé ; les explications et
-les liens ont été adaptés au dossier actuel. Les résultats des exécutions
-précédentes ont été effacés pour vous laisser exécuter les exemples.
-
-**Pour le travail de l'après-midi du 24 septembre, suivez le
-[livret DOCX](../../documents/2026-09-24_python_exercices.docx)** : exercice
-commun, puis choix A, B ou C. Le notebook `05` de ce dossier reprend les
-quatre anciens exercices du 22 septembre. Il est facultatif ; ses lettres
-A, B, C et D désignent d'autres exercices.
-
 ## Choisir le fichier utile
 
 | Fichier | Ce que vous allez faire |
@@ -23,7 +8,6 @@ A, B, C et D désignent d'autres exercices.
 | [03_Architecture_Gaussian_mixture_FR.ipynb](03_Architecture_Gaussian_mixture_FR.ipynb) | Simuler deux groupes, écrire deux fonctions, construire la classe `GaussianMixture`, puis déplacer les définitions dans votre module. |
 | [04_CSV_types_missing_values_FR.ipynb](04_CSV_types_missing_values_FR.ipynb) | Lire un petit CSV, choisir les types, repérer les valeurs manquantes et comparer plusieurs usages de `lambda`. |
 | [05_Afternoon_exercises_FR.ipynb](05_Afternoon_exercises_FR.ipynb) | Reprendre, si vous le souhaitez, l'un des quatre exercices du 22 septembre. |
-| [API_REFERENCE.md](API_REFERENCE.md) | Retrouver les fonctions, les paramètres et les vérifications utiles. |
 
 Les numéros `01` à `05` sont ceux des fichiers conservés. Ce ne sont pas des
 numéros de diapositives dans le cours du 24 septembre.
